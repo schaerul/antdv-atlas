@@ -40,7 +40,6 @@ import Timeline from "@/components/Timeline.vue";
 import Progress from "@/components/Progress.vue";
 import TableExpandableRow from "@/components/TableExpandableRow.vue";
 import TableEditable from "@/components/TableEditable.vue";
-// import TableEditableCell from "@/components/TableEditableCell.vue";
 
 const routes = [
   {
@@ -248,11 +247,6 @@ const routes = [
     name: "TableEditable",
     component: TableEditable,
   },
-  // {
-  //   path: "/editable-cell",
-  //   name: "TableEditableCell",
-  //   component: TableEditableCell,
-  // },
 ];
 
 const router = createRouter({
