@@ -1,0 +1,113 @@
+<template>
+    <a-row :style="{ marginLeft: '-8px', marginRight: '-8px' }">
+        <a-col class="code-boxes-col-2-1" :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
+            <section id="components-auto-complete-demo-basic-usage" class="code-box">
+                <section class="code-box-demo">
+                    <a-auto-complete
+                        v-model:value="value"
+                        :options="options"
+                        
+                        placeholder="input here"
+                        @select="onSelect"
+                        @search="onSearch"
+                        @change="onChange"
+                    />
+                </section>
+                <section class="code-box-meta markdown">
+                    <h4 id="Basic">
+                        Basic
+                        <a class="anchor" href="#Basic">#</a>
+                    </h4>
+                    <p>
+                        Basic Usage, set datasource of autocomplete with <code>options</code> property.
+                    </p>
+                </section>
+                <div class="code-box-actions">
+                    <span class="code-expand-icon">
+                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
+                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
+                    </span>
+                </div>
+            </section>
+        </a-col>
+
+        <a-col class="code-boxes-col-2-1" :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
+            <section id="components-auto-complete-demo-customized" class="code-box">
+                <section class="code-box-demo">
+                    <a-auto-complete
+                        v-model:value="value"
+                        style="width: 200px"
+                        placeholder="input here"
+                        @search="handleSearch"
+                    >
+                        <template #dataSource>
+                        <a-select-option v-for="email in result" :key="email">
+                            {{ email }}
+                        </a-select-option>
+                        </template>
+                    </a-auto-complete>
+                </section>
+                <section class="code-box-meta markdown">
+                    <h4 id="Customized">
+                        Customized
+                        <a class="anchor" href="#Customized">#</a>
+                    </h4>
+                    <p>
+                        You could pass <code>#dataSource</code> as children of <code>AutoComplete</code>, instead of using <code>dataSource</code>。
+                    </p>
+                </section>
+                <div class="code-box-actions">
+                    <span class="code-expand-icon">
+                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
+                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
+                    </span>
+                </div>
+            </section>
+        </a-col>
+    </a-row>
+</template>
+
+<script>
+const mockVal = (str, repeat = 1) => {
+  return {
+    value: str.repeat(repeat),
+  };
+};
+export default {
+  data() {
+    return {
+      value: '',
+      options: [],
+      result: [],
+    };
+  },
+  watch: {
+    value(val) {
+      console.log('value', val);
+    },
+  },
+  methods: {
+    onSearch(searchText) {
+      console.log('searchText');
+      this.options = !searchText
+        ? []
+        : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)];
+    },
+    onSelect(value) {
+      console.log('onSelect', value);
+    },
+    onChange(value) {
+      console.log('onChange', value);
+    },
+    handleSearch(value) {
+      let result;
+      if (!value || value.indexOf('@') >= 0) {
+        result = [];
+      } else {
+        result = ['gmail.com', 'atlasvm.io', 'stickearn.com'].map(domain => `${value}@${domain}`);
+      }
+      this.result = result;
+    },
+  },
+};
+</script>
