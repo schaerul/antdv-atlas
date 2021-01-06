@@ -114,7 +114,7 @@
               </router-link>
             </a-menu-item>
             <a-menu-item key="21">
-              Mention
+              Mention (soon)
             </a-menu-item>
             <a-menu-item key="22">
               <router-link to="/radio">
@@ -122,7 +122,7 @@
               </router-link>
             </a-menu-item>
             <a-menu-item key="23">
-              Rate
+              Rate (soon)
             </a-menu-item>
             <a-menu-item key="24">
               <router-link to="/select">
@@ -130,7 +130,7 @@
               </router-link>>
             </a-menu-item>
             <a-menu-item key="25">
-              Slider
+              Slider (soon)
             </a-menu-item>
             <a-menu-item key="26">
               <router-link to="/switch">
@@ -350,9 +350,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-  /* text-align: center;
-  color: #2c3e50;
-  margin-top: 60px; */
 }
 
 #components-layout-demo-fixed-sider .logo {

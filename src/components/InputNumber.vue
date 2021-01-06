@@ -4,7 +4,7 @@
             <section id="components-input-number-demo-basic" class="code-box">
                 <section class="code-box-demo">
                     <div>
-                        <a-input-number id="inputNumber" v-model:value="value" :min="1" :max="10" @change="onChange" />
+                        <a-input-number id="inputNumber" v-model:value="value" :min="1" :max="100" @change="onChange" />
                         <br/><br/>Current Value: {{ value }}
                     </div>
                 </section>
@@ -132,5 +132,6 @@ export default {
 <style>
 #components-input-number-demo-formatter .ant-input-number{
     margin-right: 16px;
+    width: 30%;
 }
 </style>

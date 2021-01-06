@@ -6,8 +6,8 @@
                     <a-auto-complete
                         v-model:value="value"
                         :options="options"
-                        
-                        placeholder="input here"
+                        style="width: 100%"
+                        placeholder="Input your text .."
                         @select="onSelect"
                         @search="onSearch"
                         @change="onChange"
@@ -35,9 +35,9 @@
             <section id="components-auto-complete-demo-customized" class="code-box">
                 <section class="code-box-demo">
                     <a-auto-complete
-                        v-model:value="value"
-                        style="width: 200px"
-                        placeholder="input here"
+                        v-model:value="value2"
+                        style="width: 100%"
+                        placeholder="Input your text .."
                         @search="handleSearch"
                     >
                         <template #dataSource>
@@ -77,6 +77,7 @@ export default {
   data() {
     return {
       value: '',
+      value2: '',
       options: [],
       result: [],
     };
@@ -99,12 +100,12 @@ export default {
     onChange(value) {
       console.log('onChange', value);
     },
-    handleSearch(value) {
+    handleSearch(value2) {
       let result;
-      if (!value || value.indexOf('@') >= 0) {
+      if (!value2 || value2.indexOf('@') >= 0) {
         result = [];
       } else {
-        result = ['gmail.com', 'atlasvm.io', 'stickearn.com'].map(domain => `${value}@${domain}`);
+        result = ['gmail.com', 'atlasvm.io', 'stickearn.com'].map(domain => `${value2}@${domain}`);
       }
       this.result = result;
     },

@@ -225,6 +225,6 @@ export default {
 
 .ant-upload-select-picture-card .ant-upload-text {
   margin-top: 8px;
-  color: #666;
+  color: #2C3E50;
 }
 </style>

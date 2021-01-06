@@ -8,7 +8,7 @@
                             :options="options"
                             :display-render="displayRender"
                             
-                            placeholder="Select Category"
+                            
                             @change="onChange"
                         />
                 </section>
@@ -36,7 +36,7 @@
                       :options="options"
                       :display-render="displayRender"
                       expand-trigger="hover"
-                      placeholder="Select Category"
+                      
                       @change="onChange"
                     />
                 </section>
@@ -62,11 +62,11 @@
             <section id="components-cascader-demo-search" class="code-box expand">
                 <section class="code-box-demo">
                     <a-cascader
-                      v-model:value="value"
+                      v-model:value="value3"
                       :options="options"
                       :show-search="{ filter }"
-                      placeholder="Please select"
-                      @change="onChange"
+                      
+                      @change="onChange3"
                     />
                 </section>
                 <section class="code-box-meta markdown">
@@ -116,6 +116,7 @@ export default {
   data() {
     return {
       value: [],
+      value3: [],
       options: [
         {
           value: 'makanan-minuman',
@@ -200,8 +201,8 @@ export default {
   },
   methods: {
 
-    onChange(value, selectedOptions) {
-      console.log(value, selectedOptions);
+    onChange3(value3, selectedOptions) {
+      console.log(value3, selectedOptions);
     },
     filter(inputValue, path) {
       return path.some(option => option.label.toLowerCase().indexOf(inputValue.toLowerCase()) > -1);
