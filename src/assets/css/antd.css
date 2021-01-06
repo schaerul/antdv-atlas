@@ -14654,9 +14654,9 @@ span.ant-radio + * {
   background: #15E1C0;
 }
 .ant-calendar-today .ant-calendar-date {
-  color: #0CC6A7;
-  font-weight: 500;
-  background: #f5f5f5;
+  color: #0CC6A7 !important;
+  font-weight: 500 !important;
+  background: #f5f5f5 !important;
 }
 .ant-calendar-today .ant-calendar-date:hover{
   background: #0CC6A7;
