@@ -201,14 +201,34 @@
               <template #title>
                 <span>Table</span>
               </template>
-                <a-menu-item key="31">
-                  <router-link to="/table-fixedcolumnheader">
-                    Fixed Column/Header
+                <a-menu-item key="55">
+                  <router-link to="/basic-table">
+                    Basic
+                  </router-link>
+                </a-menu-item>
+                <a-menu-item key="57">
+                  <router-link to="/col-row-span">
+                    ColSpan & RowSpan
                   </router-link>
                 </a-menu-item>
                 <a-menu-item key="54">
                   <router-link to="">
                     Editable Cell
+                  </router-link>
+                </a-menu-item>
+                <a-menu-item key="31">
+                  <router-link to="/table-fixedcolumnheader">
+                    Fixed Column/Header
+                  </router-link>
+                </a-menu-item>
+                 <a-menu-item key="59">
+                  <router-link to="/filter-sort-table">
+                    Filter & Sort
+                  </router-link>
+                </a-menu-item>
+                 <a-menu-item key="58">
+                  <router-link to="/grouping-table">
+                    Grouping Table Head
                   </router-link>
                 </a-menu-item>
                 <a-menu-item key="53">
@@ -224,6 +244,11 @@
                 <a-menu-item key="52">
                   <router-link to="/expandable-row">
                     Expandable Rows
+                  </router-link>
+                </a-menu-item>
+                <a-menu-item key="56">
+                  <router-link to="/header-table">
+                    Header, Border & Title
                   </router-link>
                 </a-menu-item>
             </a-sub-menu>

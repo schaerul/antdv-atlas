@@ -40,6 +40,11 @@ import Timeline from "@/components/Timeline.vue";
 import Progress from "@/components/Progress.vue";
 import TableExpandableRow from "@/components/TableExpandableRow.vue";
 import TableEditable from "@/components/TableEditable.vue";
+import TableBasic from "@/components/TableBasic.vue";
+import TableHeader from "@/components/TableHeader.vue";
+import TableColRowSpan from "@/components/TableColRowSpan.vue";
+import TableGrouping from "@/components/TableGrouping.vue";
+import TableFilterSort from "@/components/TableFilterSort.vue";
 
 const routes = [
   {
@@ -246,6 +251,31 @@ const routes = [
     path: "/editable-row",
     name: "TableEditable",
     component: TableEditable,
+  },
+  {
+    path: "/basic-table",
+    name: "TableBasic",
+    component: TableBasic,
+  },
+  {
+    path: "/header-table",
+    name: "TableHeader",
+    component: TableHeader,
+  },
+  {
+    path: "/col-row-span",
+    name: "TableColRowSpan",
+    component: TableColRowSpan,
+  },
+  {
+    path: "/grouping-table",
+    name: "TableGrouping",
+    component: TableGrouping,
+  },
+  {
+    path: "/filter-sort-table",
+    name: "TableFilterSort",
+    component: TableFilterSort,
   },
 ];
 
