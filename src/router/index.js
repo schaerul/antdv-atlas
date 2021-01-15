@@ -45,6 +45,10 @@ import TableHeader from "@/components/TableHeader.vue";
 import TableColRowSpan from "@/components/TableColRowSpan.vue";
 import TableGrouping from "@/components/TableGrouping.vue";
 import TableFilterSort from "@/components/TableFilterSort.vue";
+import Grid from "@/components/Grid.vue";
+import Space from "@/components/Space.vue";
+import Dashboard from "@/components/Dashboard.vue";
+import Card from "@/components/Card.vue";
 
 const routes = [
   {
@@ -276,6 +280,26 @@ const routes = [
     path: "/filter-sort-table",
     name: "TableFilterSort",
     component: TableFilterSort,
+  },
+  {
+    path: "/grid",
+    name: "Grid",
+    component: Grid,
+  },
+  {
+    path: "/space",
+    name: "Space",
+    component: Space,
+  },
+  {
+    path: "/",
+    name: "Dashboard",
+    component: Dashboard,
+  },
+  {
+    path: "/card",
+    name: "Card",
+    component: Card,
   },
 ];
 

@@ -21088,7 +21088,7 @@ textarea.ant-mentions {
 .ant-slider-track {
   position: absolute;
   height: 4px;
-  background-color: #91d5ff;
+  background-color: #10F5CF;
   border-radius: 2px;
   transition: background-color 0.3s;
 }
@@ -21098,7 +21098,7 @@ textarea.ant-mentions {
   height: 14px;
   margin-top: -5px;
   background-color: #fff;
-  border: solid 2px #91d5ff;
+  border: solid 4px #10F5CF;
   border-radius: 50%;
   box-shadow: 0;
   cursor: pointer;
@@ -21116,10 +21116,10 @@ textarea.ant-mentions {
   background-color: #e1e1e1;
 }
 .ant-slider:hover .ant-slider-track {
-  background-color: #69c0ff;
+  background-color: #0CC6A7;
 }
 .ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
-  border-color: #69c0ff;
+  border-color: #0CC6A7;
 }
 .ant-slider-mark {
   position: absolute;
@@ -21163,7 +21163,7 @@ textarea.ant-mentions {
   margin-left: -4px;
 }
 .ant-slider-dot-active {
-  border-color: #8cc8ff;
+  border-color: #10F5CF;
 }
 .ant-slider-disabled {
   cursor: not-allowed;
@@ -21918,7 +21918,7 @@ textarea.ant-mentions {
   height: 26px;
   line-height: 20px;
   vertical-align: middle;
-  background-color: #DEDEDE;
+  background-color: #f1f1f1;
   border: 2px solid transparent;
   border-radius: 100px;
   cursor: pointer;
@@ -21947,10 +21947,11 @@ textarea.ant-mentions {
   cursor: pointer;
   transition: all 0.36s cubic-bezier(0.78, 0.14, 0.15, 0.86);
   content: ' ';
+  box-shadow: 2px 4px 8px -2px rgba(44,62,80,.16), 0 0 1px rgba(44,62,80,.24);
 }
-/* .ant-switch::after {
-  box-shadow: 0 2px 4px 0 rgba(12,198,167,0.2);
-} */
+.ant-switch::after {
+  box-shadow: 2px 4px 8px -2px rgba(44,62,80,.16), 0 0 1px rgba(44,62,80,.24);
+}
 .ant-switch:not(.ant-switch-disabled):active::before,
 .ant-switch:not(.ant-switch-disabled):active::after {
   width: 24px;

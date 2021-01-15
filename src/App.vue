@@ -29,13 +29,17 @@
               <span><SettingOutlined /><span>Layout</span></span>
             </template>
             <a-menu-item key="3">
-              Grid (soon)
+              <router-link to="/grid">
+              Grid
+              </router-link>
             </a-menu-item>
             <a-menu-item key="4">
               Layout (soon)
             </a-menu-item>
             <a-menu-item key="5">
-              Space (soon)
+              <router-link to="/space">
+              Space
+              </router-link>
             </a-menu-item>
         </a-sub-menu>
         <a-sub-menu key="sub3">
@@ -172,8 +176,8 @@
                 Badge
               </router-link>
             </a-menu-item>
-            <a-menu-item key="">
-              <router-link to="">
+            <a-menu-item key="60">
+              <router-link to="/card">
                 Card
               </router-link>
             </a-menu-item>
