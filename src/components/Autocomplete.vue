@@ -22,12 +22,6 @@
                         Basic Usage, set datasource of autocomplete with <code>options</code> property.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
 
@@ -56,12 +50,6 @@
                         You could pass <code>#dataSource</code> as children of <code>AutoComplete</code>, instead of using <code>dataSource</code>。
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
     </a-row>

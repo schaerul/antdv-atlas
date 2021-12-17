@@ -6,73 +6,38 @@
         <a-col class="code-boxes-col-2-1" :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
             <section id="components-select-demo-basic-usage" class="code-box">
                 <section class="code-box-demo">
-                    <a-select
+                    <a-radio-group v-model:value="size">
+                        <a-radio-button value="large">Large</a-radio-button>
+                        <a-radio-button value="default">Default</a-radio-button>
+                        <a-radio-button value="small">Small</a-radio-button>
+                    </a-radio-group>
+                    <br />
+                    <br />
+                    <a-space direction="vertical" style="width: 100%">
+                        <a-select
                         v-model:value="value1"
-                        show-search
-                        allowClear
-                        placeholder="Select City"
-                        option-filter-prop="children"
-                        style="width: 60%"
-                        :filter-option="filterOption"
-                        @focus="handleFocus"
-                        @blur="handleBlur"
-                        @change="handleChange"
-                    >
-                            <a-select-option value="bandung">
-                                Bandung
-                            </a-select-option>
-                            <a-select-option value="bogor">
-                                Bogor
-                            </a-select-option>
-                            <a-select-option value="disabled" disabled>
-                                Jakarta
-                            </a-select-option>
-                            <a-select-option value="cianjur">
-                                Cianjur
-                            </a-select-option>
-                    </a-select>
-                    <a-select
+                        :size="size"
+                        style="width: 100%"
+                        :options="options"
+                        ></a-select>
+                        <a-select
                         v-model:value="value2"
-                        style="width: 60%" disabled
-                        placeholder="Select City"
-                        >
-                            <a-select-option value="bandung">
-                                Bandung
-                            </a-select-option>
-                    </a-select>
-                    <a-select
+                        :options="options"
+                        mode="multiple"
+                        :size="size"
+                        placeholder="Please Select"
+                        style="width: 100%"
+                        @popupScroll="popupScroll"
+                        ></a-select>
+                        <a-select
                         v-model:value="value3"
-                        style="width: 60%"
-                        loading
-                        ref="select"
-                        @change="handleChange"
-                        placeholder="Select City"
-                        >
-                            <a-select-option value="bandung">
-                                Bandung
-                            </a-select-option>
-                            <a-select-option value="bogor">
-                                Bogor
-                            </a-select-option>
-                            <a-select-option value="disabled" disabled>
-                                Jakarta
-                            </a-select-option>
-                            <a-select-option value="cianjur">
-                                Cianjur
-                            </a-select-option>
-                    </a-select>
-                    <a-select
-                        v-model:value="value4"
-                        style="width: 60%"
-                        @change="handleChange"
-                        placeholder="Select City"
-                        >
-                            <template #suffixIcon><smile-outlined /></template>
-                            <a-select-option value="bandung">Bandung</a-select-option>
-                            <a-select-option value="bogor">Bogor</a-select-option>
-                            <a-select-option value="disabled" disabled>Jakarta</a-select-option>
-                            <a-select-option value="cianjur">Cianjur</a-select-option>
-                    </a-select>
+                        :options="options"
+                        mode="tags"
+                        :size="size"
+                        placeholder="Please Select"
+                        style="width: 100%"
+                        ></a-select>
+                    </a-space>
                 </section>
                 <section class="code-box-meta markdown">
                     <h4 id="SelectBasic">
@@ -80,15 +45,9 @@
                         <a class="anchor" href="#SelectBasic">#</a>
                     </h4>
                     <p>
-                        Select basic usage.
+                        The height of the input field for the select defaults to 46px. If size is set to large, the height will be 56px, and if set to small, 34px.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
 
@@ -99,92 +58,49 @@
         <a-col :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
             <section id="components-select-demo-basic-usage" class="code-box">
                 <section class="code-box-demo">
-                    <a-select v-model:value="province" style="width: 40%" placeholder="Select Province">
-                        <a-select-option v-for="pro in provinceData" :key="pro">
-                            {{ pro }}
-                        </a-select-option>
-                        </a-select>
-                        <a-select v-model:value="secondCity" style="width: 40%" placeholder="Select City">
-                        <a-select-option v-for="city in cities" :key="city">
-                            {{ city }}
-                        </a-select-option>
-                    </a-select>
+                        <a-select
+                        ref="select"
+                        v-model:value="value1"
+                        style="width: 100%"
+                        :options="options1"
+                        @focus="focus"
+                        @change="handleChange"
+                        ></a-select>
+                        <a-select v-model:value="value2" style="width: 100%" disabled :options="options2"></a-select>
+                        <a-select v-model:value="value3" style="width: 100%" loading :options="options3"></a-select>
                 </section>
                 <section class="code-box-meta markdown">
-                    <h4 id="Type">
-                        Type
-                        <a class="anchor" href="#Type">#</a>
+                    <h4 id="BasicUsage">
+                        Basic Usage
+                        <a class="anchor" href="#BasicUsage">#</a>
                     </h4>
                     <p>
-                        There are <code>primary</code> button, <code>default</code> button, <code>dashed</code> button , <code>danger</code> button and <code>link</code> button in atlasdsgn.
+                        Basic usage
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
     </a-row>
 </template>
 
-<script>
-import { SmileOutlined } from '@ant-design/icons-vue';
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+export default defineComponent({
+  setup() {
+    const popupScroll = () => {
+      console.log('popupScroll');
+    };
 
-const provinceData = ['JawaBarat', 'Jakarta'];
-const cityData = {
-  JawaBarat: ['Bandung', 'Bogor', 'Cianjur'],
-  Jakarta: ['Central Jakarta', 'East Jakarta', 'North Jakarta', 'West Jakarta'],
-};
-
-export default {
-  data() {
-    const province = provinceData[0];
     return {
-      value1: [],
-      value2: [],
-      value3: [],
-      value4: [],
-      province,
-      provinceData,
-      cityData,
-      secondCity: cityData[province][0],
+      popupScroll,
+      size: ref('default'),
+      value1: ref('a1'),
+      value2: ref(['a1', 'b2']),
+      value3: ref(['a1', 'b2']),
+      options: [...Array(25)].map((_, i) => ({ value: (i + 10).toString(36) + (i + 1) })),
     };
   },
-
-  computed: {
-    cities() {
-      return cityData[this.province];
-    },
-  },
-
-  watch: {
-    province(val) {
-      this.secondCity = this.cityData[val][0];
-    },
-  },
-
-  components: {
-    SmileOutlined,
-  },
-
-  methods: {
-    handleChange(value1) {
-      console.log(`selected ${value1}`);
-    },
-    handleBlur() {
-      console.log('blur');
-    },
-    handleFocus() {
-      console.log('focus');
-    },
-    filterOption(input, option) {
-      return option.props.value.toLowerCase().indexOf(input.toLowerCase()) >= 0;
-    },
-  },
-};
+});
 </script>
 
 <style>

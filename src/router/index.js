@@ -49,6 +49,7 @@ import Grid from "@/components/Grid.vue";
 import Space from "@/components/Space.vue";
 import Dashboard from "@/components/Dashboard.vue";
 import Card from "@/components/Card.vue";
+import Alert from "@/components/Alert.vue";
 
 const routes = [
   {
@@ -300,6 +301,11 @@ const routes = [
     path: "/card",
     name: "Card",
     component: Card,
+  },
+  {
+    path: "/alert",
+    name: "Alert",
+    component: Alert,
   },
 ];
 

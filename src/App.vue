@@ -2,7 +2,7 @@
    <a-layout id="components-layout-demo-fixed-sider">
     <a-layout-sider :style="{ overflow: 'auto', height: '100vh', position: 'fixed', left: 0 }">
       <div class="logo">
-        <img alt="atlas-logo" src="./assets/atlas-logo.svg">
+        <img alt="atlas-logo" src="./assets/stickearn-logo-white.svg">
       </div>
       <a-menu
         theme="dark" 
@@ -282,7 +282,9 @@
               <span><SettingOutlined /><span>Feedback</span></span>
             </template>
             <a-menu-item key="36">
-              Alert
+              <router-link to="/alert">
+                Alert
+              </router-link>
             </a-menu-item>
             <a-menu-item key="37">
               <router-link to="/drawer">
@@ -371,11 +373,11 @@ export default {
 
 <style>
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap'); */
 
 
 #app {
-  font-family: 'Sora', sans-serif;
+  font-family: 'Gotham Rounded', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;

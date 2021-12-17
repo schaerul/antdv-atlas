@@ -1,6 +1,36 @@
 <template>
     <a-row :style="{ marginLeft: '-8px', marginRight: '-8px' }">
         <a-col class="code-boxes-col-2-1" :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
+            <section id="ccomponents-dropdown-demo-basic" class="code-box expand">
+                <section class="code-box-demo">
+                    <a-dropdown>
+                        <a class="ant-dropdown-link" @click="e => e.preventDefault()"> Hover me <DownOutlined /> </a>
+                        <template #overlay>
+                        <a-menu>
+                            <a-menu-item>
+                            <a href="javascript:;">1st menu item</a>
+                            </a-menu-item>
+                            <a-menu-item>
+                            <a href="javascript:;">2nd menu item</a>
+                            </a-menu-item>
+                            <a-menu-item>
+                            <a href="javascript:;">3rd menu item</a>
+                            </a-menu-item>
+                        </a-menu>
+                        </template>
+                    </a-dropdown>
+                </section>
+                <section class="code-box-meta markdown">
+                    <h4 id="DropdownBasic">
+                        Basic
+                        <a class="anchor" href="#DropdownBasic">#</a>
+                    </h4>
+                    <p>
+                        The most basic dropdown menu.
+                    </p>
+                </section>
+            </section>
+
             <section id="components-dropdown-demo-other-elements" class="code-box">
                 <section class="code-box-demo">
                     <a-dropdown>
@@ -34,12 +64,6 @@
                         Divider and disabled menu item.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
 
             <section id="components-dropdown-demo-trigger-mode" class="code-box">
@@ -74,50 +98,104 @@
                         The default trigger mode is <code>hover</code>, you can change it to <code>click</code>.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
 
         <a-col class="code-boxes-col-2-1" :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
-            <section id="ccomponents-dropdown-demo-basic" class="code-box expand">
+             <section id="components-dropdown-demo-button" class="code-box">
                 <section class="code-box-demo">
-                    <a-dropdown>
-                        <a class="ant-dropdown-link" @click="e => e.preventDefault()"> Hover me <DownOutlined /> </a>
+                    <div class="demo-dropdown-wrap">
+                        <a-dropdown-button @click="handleButtonClick">
+                        Button
                         <template #overlay>
-                        <a-menu>
-                            <a-menu-item>
-                            <a href="javascript:;">1st menu item</a>
+                            <a-menu @click="handleMenuClick">
+                            <a-menu-item key="1">
+                                <SettingOutlined />
+                                1st menu item
                             </a-menu-item>
-                            <a-menu-item>
-                            <a href="javascript:;">2nd menu item</a>
+                            <a-menu-item key="2">
+                                <SettingOutlined />
+                                2nd menu item
                             </a-menu-item>
-                            <a-menu-item>
-                            <a href="javascript:;">3rd menu item</a>
+                            <a-menu-item key="3">
+                                <SettingOutlined />
+                                3rd item
                             </a-menu-item>
-                        </a-menu>
+                            </a-menu>
                         </template>
-                    </a-dropdown>
+                        </a-dropdown-button>
+                        <a-dropdown-button>
+                        Button
+                        <template #overlay>
+                            <a-menu @click="handleMenuClick">
+                            <a-menu-item key="1">
+                                <SettingOutlined />
+                                1st menu item
+                            </a-menu-item>
+                            <a-menu-item key="2">
+                                <SettingOutlined />
+                                2nd menu item
+                            </a-menu-item>
+                            <a-menu-item key="3">
+                                <SettingOutlined />
+                                3rd item
+                            </a-menu-item>
+                            </a-menu>
+                        </template>
+                        <template #icon><SettingOutlined /></template>
+                        </a-dropdown-button>
+                        <a-dropdown-button disabled @click="handleButtonClick">
+                        Button
+                        <template #overlay>
+                            <a-menu @click="handleMenuClick">
+                            <a-menu-item key="1">
+                                <SettingOutlined />
+                                1st menu item
+                            </a-menu-item>
+                            <a-menu-item key="2">
+                                <SettingOutlined />
+                                2nd menu item
+                            </a-menu-item>
+                            <a-menu-item key="3">
+                                <SettingOutlined />
+                                3rd item
+                            </a-menu-item>
+                            </a-menu>
+                        </template>
+                        </a-dropdown-button>
+                        <a-dropdown>
+                        <template #overlay>
+                            <a-menu @click="handleMenuClick">
+                            <a-menu-item key="1">
+                                <SettingOutlined />
+                                1st menu item
+                            </a-menu-item>
+                            <a-menu-item key="2">
+                                <SettingOutlined />
+                                2nd menu item
+                            </a-menu-item>
+                            <a-menu-item key="3">
+                                <SettingOutlined />
+                                3rd item
+                            </a-menu-item>
+                            </a-menu>
+                        </template>
+                        <a-button>
+                            Button
+                            <DownOutlined />
+                        </a-button>
+                        </a-dropdown>
+                    </div>
                 </section>
                 <section class="code-box-meta markdown">
-                    <h4 id="DropdownBasic">
-                        Basic
-                        <a class="anchor" href="#DropdownBasic">#</a>
+                    <h4 id="DropdownButton">
+                        Dropdown Button
+                        <a class="anchor" href="#DropdownButton">#</a>
                     </h4>
                     <p>
-                        The most basic dropdown menu.
+                        A button is on the left, and a related functional menu is on the right. You can set the icon property to modify the icon of right.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
 
             <section id="components-dropdown-demo-cascading-menu" class="code-box">
@@ -151,12 +229,6 @@
                         You can choose another style of <code>image</code> by setting image to <code>Empty.PRESENTED_IMAGE_SIMPLE</code>.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
     </a-row>
@@ -171,3 +243,11 @@ export default {
   },
 };
 </script>
+
+<style>
+
+.demo-dropdown-wrap .ant-dropdown-button {
+  margin-right: 16px;
+  margin-bottom: 16px;
+}
+</style>

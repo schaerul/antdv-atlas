@@ -612,7 +612,7 @@ export default {
 .grid-demo .code-box-demo .ant-row > div:not(.gutter-row):nth-child(2n+1),
 [id^="components-grid-demo-"] .code-box-demo .ant-row-flex > div:not(.gutter-row):nth-child(2n+1),
 [id^="components-grid-demo-"] .code-box-demo .ant-row > div:not(.gutter-row):nth-child(2n+1){
-    background: #15E1C0;
+    background: #9868CF;
 }
 
 .grid-demo .code-box-demo .ant-row-flex > div:not(.gutter-row),
@@ -638,7 +638,7 @@ export default {
 .grid-demo .code-box-demo .ant-row-flex > div:not(.gutter-row), .grid-demo .code-box-demo .ant-row > div:not(.gutter-row),
 [id^="components-grid-demo-"] .code-box-demo .ant-row-flex > div:not(.gutter-row),
 [id^="components-grid-demo-"] .code-box-demo .ant-row > div:not(.gutter-row){
-    background: #0CC6A7;
+    background: #7F43C4;
     padding: 16px 0;
 }
 
@@ -655,7 +655,7 @@ export default {
   border: 0;
 }
 .gutter-box {
-  background: #0CC6A7;
+  background: #7F43C4;
   padding: 8px 0;
 }
 
@@ -664,7 +664,7 @@ export default {
   border: 0;
 }
 #components-grid-demo-playground [class~='ant-col'] > div {
-  background: #0CC6A7;
+  background: #7F43C4;
   height: 120px;
   line-height: 120px;
   font-size: 13px;

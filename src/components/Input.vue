@@ -1,7 +1,25 @@
 <template>
     <a-row :style="{ marginLeft: '-8px', marginRight: '-8px' }">
         <a-col class="code-boxes-col-2-1" :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
-            <section id="components-input-demo-basic-usage" class="code-box">
+            <section id="components-input-demo-basic" class="code-box">
+                <section class="code-box-demo">
+                    <a-input placeholder="Basic Usage" />
+                    <br/>
+                    <br/>
+                    <a-input disabled placeholder="Disabled" />
+                </section>
+                <section class="code-box-meta markdown">
+                    <h4 id="BasicInput">
+                        Basic Usage
+                        <a class="anchor" href="#BasicInput">#</a>
+                    </h4>
+                    <p>
+                        Basic usage example.
+                    </p>
+                </section>
+            </section>
+
+            <section id="components-input-demo-basic-clear" class="code-box">
                 <section class="code-box-demo">
                     <div>
                         <a-input
@@ -21,20 +39,14 @@
                     </div>
                 </section>
                 <section class="code-box-meta markdown">
-                    <h4 id="BasicInput">
+                    <h4 id="BasicClear">
                         Basic with Clear Icon
-                        <a class="anchor" href="#BasicInput">#</a>
+                        <a class="anchor" href="#BasicClear">#</a>
                     </h4>
                     <p>
                         Basic usage example with clear icon.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
 
             <section id="components-input-demo-presuffix" class="code-box">
@@ -157,18 +169,10 @@
         <a-col class="code-boxes-col-2-1" :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
             <section id="components-input-demo-autosizing-the-height-to-fit-the-content" class="code-box expand">
                 <section class="code-box-demo">
-                    <div>
-                        <a-textarea
-                        v-model:value="value1"
-                        placeholder="Autosize height based on content lines"
-                        auto-size
-                        />
-                        <div style="margin: 24px 0" />
-                        <a-textarea
-                        v-model:value="value2"
-                        placeholder="Autosize height with minimum and maximum number of lines"
-                        :auto-size="{ minRows: 2, maxRows: 5 }"
-                        />
+                    <div class="components-input-demo-size">
+                        <a-input size="large" placeholder="large size" />
+                        <a-input placeholder="default size" />
+                        <a-input size="small" placeholder="small size" />
                     </div>
                 </section>
                 <section class="code-box-meta markdown">
@@ -200,21 +204,18 @@
                     <div :style="wrapStyles">
                         <div>
                             <a-input-search
-                            v-model:value="valueSearch"
                             placeholder="input search text"
                             
                             @search="onSearch"
                             />
                             <br /><br />
                             <a-input-search
-                            v-model:value="valueSearch"
                             placeholder="input search text"
                             enter-button
                             @search="onSearch"
                             />
                             <br /><br />
                             <a-input-search
-                            v-model:value="valueSearch"
                             placeholder="input search text"
                             enter-button="Search"
                             size="large"
@@ -222,7 +223,6 @@
                             />
                             <br /><br />
                             <a-input-search
-                            v-model:value="valueSearch"
                             placeholder="input search text"
                             size="large"
                             @search="onSearch"
@@ -301,6 +301,7 @@
 <script>
 import { UserOutlined, InfoCircleOutlined, SettingOutlined } from '@ant-design/icons-vue';
 export default {
+
   components: {
     UserOutlined,
     InfoCircleOutlined,
@@ -339,3 +340,11 @@ export default {
   },
 };
 </script>
+
+<style>
+.components-input-demo-size .ant-input{
+  /* width: 200px; */
+  margin: 0 24px 24px 0;
+}
+
+</style>
