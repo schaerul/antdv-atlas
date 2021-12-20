@@ -3100,15 +3100,15 @@ textarea.ant-input-affix-wrapper {
   text-overflow: ellipsis;
 }
 .ant-input:hover {
-  border: 2px solid #7F43C4;
-  background: #fff;
+  border: 2px solid #7F43C4 !important;
+  background: #FFF !important;
 }
 .ant-input:hover > .anticon .ant-cascader-picker-clear{
   background: #F4F4FA;
 }
 .ant-input:focus {
-  background: #fff;
-  border: 2px solid #7F43C4;
+  background: #FFF !important;
+  border: 2px solid #7F43C4 !important;
   outline: 0;
   box-shadow: 0 0 0 3px rgba(127,67,196,0.12);
 }
@@ -3141,12 +3141,14 @@ textarea.ant-input {
   transition: all 0.3s, height 0s;
 }
 .ant-input-lg {
-  padding: 14px 14px;
+  padding: 14px 14px !important;
   line-height: 24px !important;
-  font-size: 16px;
+  font-size: 16px !important;
 }
 .ant-input-sm {
-  padding: 4px 12px;
+  padding: 4px 12px !important;
+  line-height: 22px !important;
+  font-size: 14px !important;
 }
 .ant-input-group {
   box-sizing: border-box;
@@ -3202,21 +3204,21 @@ textarea.ant-input {
 }
 .ant-input-group .ant-input:focus {
   z-index: 1;
-  border-right-width: 1px;
+  border-right-width: 2px;
 }
 .ant-input-group .ant-input:hover {
   z-index: 1;
-  border-right-width: 1px;
+  border-right-width: 2px;
 }
 .ant-input-group-addon {
   position: relative;
-  padding: 0 11px;
+  padding: 0 14px;
   color: #525876;
   font-weight: normal;
   font-size: 14px;
   text-align: center;
   background-color: #F4F4FA;
-  border: 1px solid transparent;
+  border: 2x solid transparent;
   border-radius: 6px;
   transition: all 0.3s;
 }
@@ -13424,17 +13426,17 @@ span.ant-radio + * {
 }
 .ant-cascader-input.ant-input {
   position: static;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   border-radius: 6px;
   width: 100%;
-  padding: 8px 24px 8px 14px;
+  padding: 10px 24px 10px 14px;
   background-color: #F4F4FA;
   cursor: pointer;
   color: #525876;
 }
-/* .ant-cascader-picker-show-search .ant-cascader-input.ant-input {
+.ant-cascader-picker-show-search .ant-cascader-input.ant-input {
   position: relative;
-} */
+}
 .ant-cascader-picker {
   box-sizing: border-box;
   margin: 0;
@@ -13457,8 +13459,8 @@ span.ant-radio + * {
   color: transparent;
 }
 .ant-cascader-picker-disabled {
-  color: rgba(0, 0, 0, 0.25);
-  background: #f5f5f5;
+  color: #AAAEC2;
+  background: #E0E2EF;
   cursor: not-allowed;
 }
 .ant-cascader-picker-disabled .ant-cascader-input {
@@ -13467,8 +13469,8 @@ span.ant-radio + * {
 .ant-cascader-picker:focus .ant-cascader-input {
   background-color: #FFFFFF;
   border-color: #7F43C4;
-  border-right-width: 1px !important;
-  box-shadow: 0 0 0 3px rgba(12,198,167,0.2);
+  border-right-width: 2px !important;
+  box-shadow: 0 0 0 3px rgba(127,67,196,0.12);
 }
 .ant-cascader-picker-show-search.ant-cascader-picker-focused {
   color: #525876;
@@ -13529,11 +13531,11 @@ span.ant-radio + * {
 .ant-cascader-picker-label:hover + .ant-cascader-input {
   border-color: #7F43C4;
   background-color: #FFFFFF;
-  border-right-width: 1px !important;
+  border-right-width: 2px !important;
 }
 .ant-cascader-picker-small .ant-cascader-picker-clear,
 .ant-cascader-picker-small .ant-cascader-picker-arrow {
-  right: 8px;
+  right: 14px;
 }
 .ant-cascader-menus {
   color: #525876;
@@ -13596,7 +13598,7 @@ span.ant-radio + * {
   border-radius: 2px;
 }
 .ant-cascader-menu-item {
-  padding: 10px 15px;
+  padding: 12px 48px 12px 14px;
   line-height: 22px;
   white-space: nowrap;
   cursor: pointer;
@@ -13614,7 +13616,7 @@ span.ant-radio + * {
 }
 .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled),
 .ant-cascader-menu-item-active:not(.ant-cascader-menu-item-disabled):hover {
-  font-weight: 400;
+  font-weight: 500;
   background-color: #F4F4FA;
 }
 .ant-cascader-menu-item-expand {
@@ -13698,7 +13700,7 @@ span.ant-radio + * {
   width: 100%;
   height: 100%;
   border: 2px solid #7F43C4;
-  border-radius: 6px;
+  border-radius: 8px;
   visibility: hidden;
   -webkit-animation: antCheckboxEffect 0.36s ease-in-out;
           animation: antCheckboxEffect 0.36s ease-in-out;
@@ -13725,11 +13727,11 @@ span.ant-radio + * {
 }
 .ant-checkbox-inner::after {
   position: absolute;
-  top: 50%;
-  left: 30%;
+  top: 45%;
+  left: 20%;
   display: table;
-  width: 5.71428571px;
-  height: 9.14285714px;
+  width: 6.714286px;
+  height: 12.142857px;
   border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
@@ -13777,17 +13779,17 @@ span.ant-radio + * {
   cursor: not-allowed;
 }
 .ant-checkbox-disabled .ant-checkbox-inner {
-  background-color: #f5f5f5;
-  border-color: #DEDEDE !important;
+  background-color: #F4F4FA;
+  border-color: #BDC1D4 !important;
 }
 .ant-checkbox-disabled .ant-checkbox-inner::after {
-  border-color: #f5f5f5;
+  border-color: #F4F4FA;
   border-collapse: separate;
   -webkit-animation-name: none;
           animation-name: none;
 }
 .ant-checkbox-disabled + span {
-  color: rgba(0, 0, 0, 0.25);
+  color: #BDC1D4;
   cursor: not-allowed;
 }
 .ant-checkbox-disabled:hover::after,
@@ -13847,8 +13849,9 @@ span.ant-radio + * {
 .ant-checkbox-indeterminate .ant-checkbox-inner::after {
   top: 50%;
   left: 50%;
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
   background-color: #7F43C4;
   border: 0;
   transform: translate(-50%, -50%) scale(1);

@@ -137,7 +137,6 @@ export default {
 
 .code-box.expand .code-box-meta{
     border-radius: 0;
-    border-bottom: 1px dashed #ebedf0;
 }
 
 .code-box-meta.markdown{

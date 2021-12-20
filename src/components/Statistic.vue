@@ -211,13 +211,9 @@ export default {
     color: rgba(0,0,0,.65);
 }
 
-#components-statistic-demo-basic{
-
-}
 
 .code-box.expand .code-box-meta{
     border-radius: 0;
-    border-bottom: 1px dashed #ebedf0;
 }
 
 .code-box-meta.markdown{

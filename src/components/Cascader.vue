@@ -7,8 +7,6 @@
                             v-model:value="value"
                             :options="options"
                             :display-render="displayRender"
-                            
-                            
                             @change="onChange"
                         />
                 </section>
@@ -21,12 +19,6 @@
                         Cascade selection box for selecting category and sub-category. <code>hover</code> to expand sub menu, <code>click</code> to select option.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
 
             <section id="components-cascader-demo-hover" class="code-box">
@@ -49,16 +41,53 @@
                         Hover to expand sub menu, click to select option.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
+            </section>
+
+            <section id="components-cascader-demo-trigger" class="code-box">
+                <section class="code-box-demo">
+                  <span>
+                    {{ text }} &nbsp;
+                    <a-cascader v-model:value="value" :options="options" @change="onChange">
+                      <a href="#">Change city</a>
+                    </a-cascader>
+                  </span>
+                </section>
+                <section class="code-box-meta markdown">
+                    <h4 id="CustomTrigger">
+                        Custom Trigger
+                        <a class="anchor" href="#CustomTrigger">#</a>
+                    </h4>
+                    <p>
+                        Separate trigger button and result.
+                    </p>
+                </section>
             </section>
         </a-col>
 
         <a-col class="code-boxes-col-2-1" :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
+            <section id="components-cascader-demo-size" class="code-box expand">
+                <section class="code-box-demo">
+                  <a-cascader v-model:value="value" size="large" style="width: 100%" :options="options" />
+                  <br />
+                  <br />
+                  <a-cascader v-model:value="value" style="width: 100%" :options="options" />
+                  <br />
+                  <br />
+                  <a-cascader v-model:value="value" size="small" style="width: 100%" :options="options" />
+                  <br />
+                  <br />
+                </section>
+                <section class="code-box-meta markdown">
+                    <h4 id="Size">
+                        Size
+                        <a class="anchor" href="#Size">#</a>
+                    </h4>
+                    <p>
+                        Cascade selection box of different sizes.
+                    </p>
+                </section>
+            </section>
+
             <section id="components-cascader-demo-search" class="code-box expand">
                 <section class="code-box-demo">
                     <a-cascader
@@ -77,14 +106,7 @@
                     <p>
                         Search and select options directly.
                     </p>
-                    <blockquote><p>Now, <code>Cascader[showSearch]</code> doesn't support search on server, more info #5547</p></blockquote>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
 
             <section id="components-cascader-demo-change-on-select" class="code-box">
@@ -100,12 +122,6 @@
                         Allow only select parent options.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
     </a-row>
@@ -119,80 +135,46 @@ export default {
       value3: [],
       options: [
         {
-          value: 'makanan-minuman',
-          label: 'Makanan & Minuman',
+          value: 'jawa-barat',
+          label: 'Jawa Barat',
           children: [
             {
-              value: 'makanan-ringan',
-              label: 'Makanan Ringan',
-              children: [
-                {
-                  value: 'biskuit-wafer',
-                  label: 'Biskuit & Wafer',
-                },
-                {
-                  value: 'cokelat',
-                  label: 'Cokelat',
-                  disabled: true,
-                },
-                {
-                  value: 'keripik',
-                  label: 'Keripik',
-                },
-              ],
+              value: 'kab-bandung',
+              label: 'Kab. Bandung',
             },
             {
-              value: 'minuman',
-              label: 'Minuman',
-              children: [
-                {
-                  value: 'air-mineral',
-                  label: 'Air Mineral',
-                },
-                {
-                  value: 'energy-drink',
-                  label: 'Energy Drink',
-                  disabled: true,
-                },
-                {
-                  value: 'soft-drink',
-                  label: 'Soft Drink',
-                },
-              ],
+              value: 'kab-cianjur',
+              label: 'Kab. Cianjur',
+            },
+            {
+              value: 'kab-ciamis',
+              label: 'Kab. Ciamis',
+            },
+            {
+              value: 'kab-bogor',
+              label: 'Kab. Bogor',
             },
           ],
         },
         {
-          value: 'kesehatan',
-          label: 'Kesehatan',
+          value: 'jakarta',
+          label: 'DKI Jakarta',
           children: [
             {
-              value: 'obat-obatan',
-              label: 'Obat - Obatan',
-              children: [
-                {
-                  value: 'obat-alergi',
-                  label: 'Obat Alergi',
-                },
-                {
-                  value: 'obat-mata',
-                  label: 'Obat Mata',
-                },
-              ],
+              value: 'jakarta-utara',
+              label: 'Jakarta Utara',
             },
             {
-              value: 'produk-dewasa',
-              label: 'Produk Dewasa',
-              children: [
-                {
-                  value: 'alat-kontrasepsi',
-                  label: 'Alat Kontrasepsi',
-                },
-                {
-                  value: 'pelumas',
-                  label: 'Pelumas',
-                },
-              ],
+              value: 'jakarta-selatan',
+              label: 'Jakarta Selatan',
+            },
+            {
+              value: 'jakarta-timur',
+              label: 'Jakarta Timur',
+            },
+            {
+              value: 'jakarta-barat',
+              label: 'Jakarta Barat',
             },
           ],
         },
@@ -250,15 +232,14 @@ export default {
     width: 100%;
 }
 
-#components-cascader-demo-search .ant-cascader-picker .ant-input:hover{
+/* #components-cascader-demo-search .ant-cascader-picker .ant-input:hover{
     border-color: #0CC6A7;
     border-right-width: 2px !important;
     background-color: #fff;
-}
+} */
 
 .code-box.expand .code-box-meta{
     border-radius: 0;
-    border-bottom: 1px dashed #ebedf0;
 }
 
 .code-box-meta.markdown{

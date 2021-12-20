@@ -332,7 +332,7 @@
         </div>
       </a-layout-content>
       <a-layout-footer :style="{ textAlign: 'center' }">
-        ©2020. made with ❤ from atlasdsgn
+        © 2020. Made with ❤ from stickdsgn
       </a-layout-footer>
     </a-layout>
   </a-layout>
