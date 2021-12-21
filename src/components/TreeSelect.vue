@@ -6,36 +6,6 @@
         <a-col class="code-boxes-col-2-1" :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
             <section id="components-tree-select-demo-checkable" class="code-box">
                 <section class="code-box-demo">
-                    <a-tree-select
-                        v-model:value="value"
-                        show-search
-                        style="width: 100%"
-                        :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
-                        placeholder="Please select"
-                        allow-clear
-                        multiple
-                        :tree-data="treeData"
-                    ></a-tree-select>
-                </section>
-                <section class="code-box-meta markdown">
-                    <h4 id="TreeSelectBasic">
-                        Basic
-                        <a class="anchor" href="#TreeSelectBasic">#</a>
-                    </h4>
-                    <p>
-                        There are <code>primary</code> button, <code>default</code> button, <code>dashed</code> button , <code>danger</code> button and <code>link</code> button in atlasdsgn.
-                    </p>
-                </section>
-            </section>
-        </a-col>
-
-        <!-- End of Left Section -->
-
-        <!-- Right Section -->
-
-        <a-col :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
-            <section id="components-tree-select-demo-checkable" class="code-box">
-                <section class="code-box-demo">
                     <a-space>
                         <a-button type="primary" @click="maxTagCount++">maxTagCount (++)</a-button>
                         <a-button type="primary" @click="maxTagCount--">maxTagCount (--)</a-button>
@@ -58,6 +28,27 @@
                         @search="onSearch"
                         @select="onSelect"
                     />
+                </section>
+                <section class="code-box-meta markdown">
+                    <h4 id="TreeSelectCheckable">
+                        Checkable & Multiple
+                        <a class="anchor" href="#TreeSelectCheckable">#</a>
+                    </h4>
+                    <p>
+                        Multiple and checkable.
+                    </p>
+                </section>
+            </section>
+        </a-col>
+
+        <!-- End of Left Section -->
+
+        <!-- Right Section -->
+
+        <a-col :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
+            <section id="components-tree-select-demo-checkable" class="code-box">
+                <section class="code-box-demo">
+
                 </section>
                 <section class="code-box-meta markdown">
                     <h4 id="TreeSelectCheckable">
