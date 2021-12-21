@@ -19,12 +19,6 @@
                         Simplest usage.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
 
             <section id="components-breadcrumb-demo-configuring-the-separator" class="code-box">
@@ -61,12 +55,6 @@
                         slot="separator"
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
 
@@ -95,12 +83,6 @@
                         The icon should be placed in front of the text.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
 
             <section id="components-breadcrumb-demo-bread-crumbs-with-drop-down-menu" class="code-box">
@@ -142,12 +124,6 @@
                         Breadcrumbs support drop down menu.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
     </a-row>

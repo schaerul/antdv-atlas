@@ -2991,7 +2991,7 @@ html {
 }
 .ant-input-affix-wrapper:focus {
   border-color: #7F43C4;
-  border-right-width: 2px !important;
+  border-right-width: 2px;
   outline: 0;
   box-shadow: 0 0 0 3px rgba(127,67,196,0.12);
 }
@@ -3042,6 +3042,7 @@ textarea.ant-input-affix-wrapper {
 }
 .ant-input-affix-wrapper > input.ant-input:focus {
   box-shadow: none;
+  border: transparent !important;
 }
 .ant-input-affix-wrapper::before {
   width: 0;
@@ -3100,15 +3101,15 @@ textarea.ant-input-affix-wrapper {
   text-overflow: ellipsis;
 }
 .ant-input:hover {
-  border: 2px solid #7F43C4 !important;
-  background: #FFF !important;
+  border: 2px solid #7F43C4;
+  background: #FFF;
 }
 .ant-input:hover > .anticon .ant-cascader-picker-clear{
   background: #F4F4FA;
 }
 .ant-input:focus {
-  background: #FFF !important;
-  border: 2px solid #7F43C4 !important;
+  background: #FFF;
+  border: 2px solid #7F43C4;
   outline: 0;
   box-shadow: 0 0 0 3px rgba(127,67,196,0.12);
 }
@@ -3427,6 +3428,7 @@ textarea.ant-input {
 
 .ant-input-affix-wrapper:hover > .ant-input{
   background: #fff;
+  border: transparent !important;
 }
 .ant-input-affix-wrapper-disabled {
   color: rgba(0, 0, 0, 0.25);
@@ -23230,8 +23232,8 @@ span.ant-transfer-list-search-action {
   left: 0;
   width: 100%;
   height: 100%;
-  border: 1px solid #7F43C4;
-  border-radius: 2px;
+  border: 2px solid #7F43C4;
+  border-radius: 6px;
   visibility: hidden;
   -webkit-animation: antCheckboxEffect 0.36s ease-in-out;
           animation: antCheckboxEffect 0.36s ease-in-out;
@@ -23242,28 +23244,29 @@ span.ant-transfer-list-search-action {
 .ant-select-tree-checkbox:hover::after,
 .ant-select-tree-checkbox-wrapper:hover .ant-select-tree-checkbox::after {
   visibility: visible;
+  border-radius: 6px;
 }
 .ant-select-tree-checkbox-inner {
   position: relative;
   top: 0;
   left: 0;
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   background-color: #fff;
-  border: 1px solid #DEDEDE;
-  border-radius: 2px;
+  border: 2px solid #E0E2EF;
+  border-radius: 6px;
   border-collapse: separate;
   transition: all 0.3s;
 }
 .ant-select-tree-checkbox-inner::after {
   position: absolute;
-  top: 50%;
-  left: 22%;
+  top: 45%;
+  left: 20%;
   display: table;
-  width: 5.71428571px;
-  height: 9.14285714px;
-  border: 1px solid #fff;
+  width: 6px;
+  height: 12px;
+  border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
   transform: rotate(45deg) scale(0) translate(-50%, -50%);
@@ -23286,7 +23289,7 @@ span.ant-transfer-list-search-action {
 .ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner::after {
   position: absolute;
   display: table;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   border-top: 0;
   border-left: 0;
   transform: rotate(45deg) scale(1) translate(-50%, -50%);
@@ -23375,15 +23378,16 @@ span.ant-transfer-list-search-action {
 }
 .ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner {
   background-color: #fff;
-  border-color: #DEDEDE;
+  border-color: #E0E2EF;
 }
 .ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner::after {
   top: 50%;
   left: 50%;
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   background-color: #7F43C4;
   border: 0;
+  border-radius: 2px;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
   content: ' ';
@@ -23395,7 +23399,7 @@ span.ant-transfer-list-search-action {
 .ant-select-tree {
   box-sizing: border-box;
   padding: 0;
-  color: rgba(0, 0, 0, 0.65);
+  color: #525876;
   font-size: 14px;
   font-variant: tabular-nums;
   line-height: 22px;
@@ -23403,10 +23407,10 @@ span.ant-transfer-list-search-action {
   font-feature-settings: 'tnum';
   margin: 0;
   margin-top: 0px;
-  padding: 0 4px;
+  padding: 4px 8px;
 }
 .ant-select-tree li {
-  margin: 12px 0;
+  margin: 14px 0;
   padding: 0;
   white-space: nowrap;
   list-style: none;
@@ -23417,27 +23421,27 @@ span.ant-transfer-list-search-action {
 }
 .ant-select-tree li ul {
   margin: 0;
-  padding: 0 0 0 18px;
+  padding: 0 0 0 40px;
 }
 .ant-select-tree li .ant-select-tree-node-content-wrapper {
   display: inline-block;
   width: calc(100% - 24px);
   margin: 0;
-  padding: 3px 6px;
+  padding: 4px 8px;
   color: #525876;
   text-decoration: none;
-  border-radius: 2px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s;
 }
 .ant-select-tree li .ant-select-tree-node-content-wrapper:hover {
-  background-color: #f5f5f5;
+  background-color: #F4F4FA;
 }
 .ant-select-tree li .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
-  background-color: #bae7ff;
+  background-color: #F4F4FA;
 }
 .ant-select-tree li span.ant-select-tree-checkbox {
-  margin: 0 4px 0 0;
+  margin: 0 8px;
 }
 .ant-select-tree li span.ant-select-tree-checkbox + .ant-select-tree-node-content-wrapper {
   width: calc(100% - 46px);
@@ -23448,7 +23452,7 @@ span.ant-transfer-list-search-action {
   width: 24px;
   height: 24px;
   margin: 0;
-  line-height: 22px;
+  line-height: 20px;
   text-align: center;
   vertical-align: middle;
   border: 0 none;

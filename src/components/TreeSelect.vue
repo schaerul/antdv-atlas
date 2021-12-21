@@ -8,15 +8,14 @@
                 <section class="code-box-demo">
                     <a-tree-select
                         v-model:value="value"
-                        style="width: 100%"
-                        :tree-data="treeData"
-                        tree-checkable
                         show-search
+                        style="width: 100%"
                         :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
+                        placeholder="Please select"
                         allow-clear
-                        :show-checked-strategy="SHOW_PARENT"
-                        search-placeholder="Please select"
-                    />
+                        multiple
+                        :tree-data="treeData"
+                    ></a-tree-select>
                 </section>
                 <section class="code-box-meta markdown">
                     <h4 id="TreeSelectBasic">
@@ -27,12 +26,6 @@
                         There are <code>primary</code> button, <code>default</code> button, <code>dashed</code> button , <code>danger</code> button and <code>link</code> button in atlasdsgn.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
 
@@ -43,16 +36,27 @@
         <a-col :span="12" :style="{ paddingLeft: '8px', paddingRight: '8px' }">
             <section id="components-tree-select-demo-checkable" class="code-box">
                 <section class="code-box-demo">
+                    <a-space>
+                        <a-button type="primary" @click="maxTagCount++">maxTagCount (++)</a-button>
+                        <a-button type="primary" @click="maxTagCount--">maxTagCount (--)</a-button>
+                    </a-space>
+                    <br/>
+                    <br/>
+                    <h3>maxTagCount: {{ maxTagCount }}</h3>
+                    <br/>
                     <a-tree-select
                         v-model:value="value"
                         style="width: 100%"
                         :tree-data="treeData"
                         tree-checkable
-                        show-search
-                        :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
-                        allow-clear
                         :show-checked-strategy="SHOW_PARENT"
-                        search-placeholder="Please select"
+                        placeholder="All Location"
+                        show-search
+                        multiple
+                        allow-clear
+                        @change="onChange"
+                        @search="onSearch"
+                        @select="onSelect"
                     />
                 </section>
                 <section class="code-box-meta markdown">
@@ -64,12 +68,6 @@
                         There are <code>primary</code> button, <code>default</code> button, <code>dashed</code> button , <code>danger</code> button and <code>link</code> button in atlasdsgn.
                     </p>
                 </section>
-                <div class="code-box-actions">
-                    <span class="code-expand-icon">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/wSAkBuJFbdxsosKKpqyq.svg" class="code-expand-icon-show">
-                        <img width="18" alt="expand code" src="https://gw.alipayobjects.com/zos/rmsportal/OpROPHYqWmrMDBFMZtKF.svg" class="code-expand-icon-hide">
-                    </span>
-                </div>
             </section>
         </a-col>
     </a-row>
@@ -77,41 +75,62 @@
 
 <script>
 import { TreeSelect } from 'ant-design-vue';
+// import { defineComponent, ref, watch } from 'vue';
 const SHOW_PARENT = TreeSelect.SHOW_PARENT;
 
 const treeData = [
   {
-    title: 'Node1',
-    value: '0-0',
+    title: 'Jawa Barat',
+    value: 'jawa barat',
     key: '0-0',
     children: [
       {
-        title: 'Child Node1',
-        value: '0-0-0',
+        title: 'Kab. Bandung',
+        value: 'kab bandung',
         key: '0-0-0',
+      },
+      {
+        title: 'Kab. Bogor',
+        value: 'kab bogor',
+        key: '0-0-1',
+      },
+      {
+        title: 'Kab. Cianjur',
+        value: 'kab cianjur',
+        key: '0-0-2',
+      },
+      {
+        title: 'Kab. Ciamis',
+        value: 'kab ciamis',
+        key: '0-0-3',
       },
     ],
   },
   {
-    title: 'Node2',
-    value: '0-1',
+    title: 'DKI Jakarta',
+    value: 'dki jakarta',
     key: '0-1',
     children: [
       {
-        title: 'Child Node3',
-        value: '0-1-0',
+        title: 'Jakarta Barat',
+        value: 'jakarta barat',
         key: '0-1-0',
         disabled: true,
       },
       {
-        title: 'Child Node4',
-        value: '0-1-1',
+        title: 'Jakarta Selatan',
+        value: 'jakarta selatan',
         key: '0-1-1',
       },
       {
-        title: 'Child Node5',
-        value: '0-1-2',
+        title: 'Jakarta Timur',
+        value: 'jakarta timur',
         key: '0-1-2',
+      },
+      {
+        title: 'Jakarta Utara',
+        value: 'jakarta utara',
+        key: '0-1-3',
       },
     ],
   },
@@ -120,10 +139,22 @@ export default {
   data() {
     return {
       treeExpandedKeys: [],
-      value: ['0-0-0'],
+      value: undefined,
       treeData,
       SHOW_PARENT,
     };
+  },
+  methods: {
+    onChange(value) {
+      console.log(value);
+      this.value = value;
+    },
+    onSearch() {
+      console.log(...arguments);
+    },
+    onSelect() {
+      console.log(...arguments);
+    },
   },
 };
 </script>
